@@ -5,21 +5,21 @@
 class Sslcheckdomain < Formula
   desc "SSL certificate checker for domains with multiple output formats"
   homepage "https://github.com/abravonunez/sslcheckdomain"
-  version "1.3.0"
+  version "1.3.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/abravonunez/sslcheckdomain/releases/download/v1.3.0/sslcheckdomain_Darwin_x86_64.tar.gz"
-      sha256 "f4b7bbc1f170e3fe60452e8941a385215e3ea95c0d0cf840ac7657ccf974c3d1"
+      url "https://github.com/abravonunez/sslcheckdomain/releases/download/v1.3.1/sslcheckdomain_Darwin_x86_64.tar.gz"
+      sha256 "c61486d2cd216c1ef9023a2f6835c2985d44b0b8f4aaea08ffb88c041767292b"
 
       define_method(:install) do
         bin.install "sslcheckdomain"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/abravonunez/sslcheckdomain/releases/download/v1.3.0/sslcheckdomain_Darwin_arm64.tar.gz"
-      sha256 "5acf86b4e5c7c54ab14ab96f4bd23038684d738d5db955df06b9579ed4c1b61e"
+      url "https://github.com/abravonunez/sslcheckdomain/releases/download/v1.3.1/sslcheckdomain_Darwin_arm64.tar.gz"
+      sha256 "bee7bf0d6e77cb92702ae6c5cc02bf1ac637023a1a826138702f17a8af3b530e"
 
       define_method(:install) do
         bin.install "sslcheckdomain"
@@ -29,15 +29,15 @@ class Sslcheckdomain < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abravonunez/sslcheckdomain/releases/download/v1.3.0/sslcheckdomain_Linux_x86_64.tar.gz"
-      sha256 "67cc279f4d80a2df03c42cc173ff6541534c2a99816ab70b56d95e0fc147fea4"
+      url "https://github.com/abravonunez/sslcheckdomain/releases/download/v1.3.1/sslcheckdomain_Linux_x86_64.tar.gz"
+      sha256 "ac2ddae8d1de3e4d3389fde2fe8c368cca0e1427a82a837427fc10bf27629878"
       define_method(:install) do
         bin.install "sslcheckdomain"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abravonunez/sslcheckdomain/releases/download/v1.3.0/sslcheckdomain_Linux_arm64.tar.gz"
-      sha256 "45b2b72a4e952022e8d487df0d167ef94d6faf82210a14412af3b432920a35d9"
+      url "https://github.com/abravonunez/sslcheckdomain/releases/download/v1.3.1/sslcheckdomain_Linux_arm64.tar.gz"
+      sha256 "8afcb052fd2fcfb4a3b876a83507ec4f545b45b7b691e1651fa206c43d4d8c60"
       define_method(:install) do
         bin.install "sslcheckdomain"
       end
