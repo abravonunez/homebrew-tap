@@ -5,23 +5,23 @@
 class Raracandy < Formula
   desc "CLI tool to safely edit Pokémon Gen 1 save files"
   homepage "https://github.com/abravonunez/raracandy"
-  version "1.1.1"
+  version "1.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/abravonunez/raracandy/releases/download/v1.1.1/raracandy_Darwin_x86_64.tar.gz"
-      sha256 "0772663954a5eee77389a5ec9d6beec21811753014f82010933330df53dc700c"
+      url "https://github.com/abravonunez/raracandy/releases/download/v1.2.0/raracandy_Darwin_x86_64.tar.gz"
+      sha256 "c3f7a9261ca511b56c4d5c866be00d817e9dba97995905c478bb7aa86e4ab337"
 
-      def install
+      define_method(:install) do
         bin.install "raracandy"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/abravonunez/raracandy/releases/download/v1.1.1/raracandy_Darwin_arm64.tar.gz"
-      sha256 "f9d34184c469d9a8b15c26b6098de276f98e7e605e08d8be3c0e8059a1558142"
+      url "https://github.com/abravonunez/raracandy/releases/download/v1.2.0/raracandy_Darwin_arm64.tar.gz"
+      sha256 "d47401163d83c062d61739ff4ad216253a676376d089cbec6087bda1c32584ac"
 
-      def install
+      define_method(:install) do
         bin.install "raracandy"
       end
     end
@@ -29,16 +29,16 @@ class Raracandy < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abravonunez/raracandy/releases/download/v1.1.1/raracandy_Linux_x86_64.tar.gz"
-      sha256 "af2e5805cfa293f5c0e0f5f5958d30bec1650f7568e0c02bd9fdff68d3df7e17"
-      def install
+      url "https://github.com/abravonunez/raracandy/releases/download/v1.2.0/raracandy_Linux_x86_64.tar.gz"
+      sha256 "0294ebfc2629b1ee9e201810aaf6c8ce29e59ed049c9eb598d44ff804eb3ffa2"
+      define_method(:install) do
         bin.install "raracandy"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abravonunez/raracandy/releases/download/v1.1.1/raracandy_Linux_arm64.tar.gz"
-      sha256 "12b5265f80846102039f83baf39793e4efa0180ce96a2e9af1f9161b1977ee0c"
-      def install
+      url "https://github.com/abravonunez/raracandy/releases/download/v1.2.0/raracandy_Linux_arm64.tar.gz"
+      sha256 "365b4f3ff3dc212511e14e36ebdc463e1f6f6531089de92a4e1eab1f371524ad"
+      define_method(:install) do
         bin.install "raracandy"
       end
     end
