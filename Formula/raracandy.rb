@@ -45,6 +45,6 @@ class Raracandy < Formula
   end
 
   test do
-    system "#{bin}/raracandy --version"
+    system "#{bin}/raracandy --help"
   end
 end
